@@ -1,0 +1,17 @@
+$primaryColor: #EAEBED;
+$secondaryColor: #98DAD9;
+$thirdColor: #5B8291;
+$highlightColor: #2E424D;
+$text-color: black;
+
+// dark mode
+
+$d_text-color: white;
+
+@media (prefers-color-scheme: dark) {
+  body{
+    background-color: $primaryColor;
+  }
+}
+
+

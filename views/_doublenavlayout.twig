@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+<div class="navigation_bar">
+    <nav class="upperNav">
+        <div class="Logo">
+            <a href="/">LOGO</a>
+        </div>
+
+        <div>
+            <form method="get" action="/list">
+                <input type="search">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="List">
+            <ul>
+                <li><a href="/" >Home</a></li>
+                <li><a href="/list">List</a></li>
+                <li><a href="/">Pricing</a></li>
+                <li><a href="/">FAQs</a></li>
+                <li><a href="/">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="lowerNav">
+        <ul>
+            <li><a href="/">Fashion</a></li>
+            <li><a href="/">Electronics</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Books</a></li>
+            <li><a href="/">Sports & Outdoors</a></li>
+            <li><a href="/">Toys & Games</a></li>
+            <li><a href="/">Pet Supplies</a></li>
+            <li><a href="/">Health & Household</a></li>
+        </ul>
+
+        <ul>
+            {% if user == "" %}
+            <li><a class="btn_outline" href="/">Login</a></li>
+            <li><a class="btn_filled" href="/">Sign-up</a></li>
+            {% else %}
+                <li class="user">hi, {{ user }}</li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+<div id="sidebar">
+    {# write here #}
+    <div>
+
+            <button class="dropdown-btn">Brand
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <button class="dropdown-btn">Type
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <button class="dropdown-btn">Pricing
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <button class="dropdown-btn">Reviews
+                <i class="fa fa-caret-down"></i>
+            </button>
+
+
+    </div>
+    <div>
+
+            <div class = dropdowncontainer>
+                <ul>
+
+                    <li><a href = "#"> Brand1 </a></li>
+                    <li><a href = "#"> Brand2 </a></li>
+                    <li><a href = "#"> Brand3</a></li>
+                    <li><a href = "#"> Brand4</a></li>
+                    <li><a href = "#"> Brand5 </a></li>
+
+                </ul>
+
+            </div>
+        <div class = dropdowncontainer>
+            <ul>
+                <li><a href = "#"> Type1 </a></li>
+                <li><a href = "#"> Type2 </a></li>
+                <li><a href = "#"> Type3</a></li>
+                <li><a href = "#"> Type4</a></li>
+                <li><a href = "#"> Type5 </a></li>
+                <li><a href = "#"> Type6 </a></li>
+                <li><a href = "#"> Type7 </a></li>
+                <li><a href = "#"> Type8</a></li>
+            </ul>
+
+        </div>  <div class = dropdowncontainer>
+            <ul>
+                <li><a href = "#"> Under $25 </a></li>
+                <li><a href = "#"> $25 to $50 </a></li>
+                <li><a href = "#"> $50 to $100</a></li>
+                <li><a href = "#"> $100 to $200</a></li>
+                <li><a href = "#"> Above $200 </a></li>
+
+            </ul>
+
+
+        </div>  <div class = dropdowncontainer>
+            <ul>
+                <li><a href = "#">
+                        <div class="rating">
+                            <div class="row">
+                                <div style="width: {{ 1 * 100 / 5 }}%">
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                <li><a href = "#">
+                        <div class="rating">
+                            <div class="row">
+                                <div style="width: {{ 2 * 100 / 5 }}%">
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                <li><a href = "#">
+                        <div class="rating">
+                            <div class="row">
+                                <div style="width: {{ 3 * 100 / 5 }}%">
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                <li><a href = "#">
+                        <div class="rating">
+                            <div class="row">
+                                <div style="width: {{ 4 * 100 / 5 }}%">
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+                <li><a href = "#">
+                        <div class="rating">
+                            <div class="row">
+                                <div style="width: {{ 5 * 100 / 5 }}%">
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+                                    <span class="material-symbols-outlined">star</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+{% block body %}{% endblock %}
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn")
+        var i;
+        for ( i = 0; i < dropdown.lengthlength ; i++) {
+            dropdown[i].addEventListener("click",function(){
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if(dropdownContent.style.display =="block"){
+                    dropdownContent.style.display="none";
+
+                }else{
+                    dropdownContent.style.display="block";
+                }
+            });
+
+        }
+    </script>
+</body>
+</html>
